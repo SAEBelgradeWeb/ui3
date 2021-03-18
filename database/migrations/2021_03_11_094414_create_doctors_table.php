@@ -18,6 +18,7 @@ class CreateDoctorsTable extends Migration
             $table->string('name');
             $table->text('bio')->nullable();
             $table->string('avatar')->nullable();
+            $table->string('email');
             $table->foreignId('department_id');
             $table->timestamps();
 

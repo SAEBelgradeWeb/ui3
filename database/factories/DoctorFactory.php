@@ -26,6 +26,7 @@ class DoctorFactory extends Factory
             'bio' => $this->faker->realText(300),
             'avatar' => $this->faker->imageUrl(),
             'department_id' => $this->faker->numberBetween(1, 4),
+            'email' => $this->faker->email,
         ];
     }
 }
