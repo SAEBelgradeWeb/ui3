@@ -20,7 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('api')->get('/doctors', [DoctorController::class, 'index']);
-Route::middleware('api')->get('/departments', [DepartmentController::class, 'index']);
+
+Route::middleware('auth:api')->get('/doctors', [DoctorController::class, 'index']);
+Route::middleware('auth:api')->get('/departments', [DepartmentController::class, 'index']);
 
 Route::middleware('api')->post('/doctors/send-email', [DoctorController::class, 'sendEmail']);

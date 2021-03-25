@@ -1,7 +1,5 @@
 <template>
     <div>
-
-
         <h1>Doctors list</h1>
         <div v-for="department in departments">
             {{department.title}}
@@ -10,8 +8,6 @@
             </ul>
 
         </div>
-
-
     </div>
 </template>
 
